@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %} Escuela Profesional de {{ object.nombre }} {% endblock %}
+{% block content %}
+<h1>{{ object.nombre }}</h1>
+<h2>{{ object.codigo }}</h2>
+<p>Malla: {{ object.malla }}</p>
+<p>Creditos: {{ object.creditos }}</p>
+<p>Prerequisito: {{ object.prereq }}</p>
+<p>{{ object.semejante }}</p>
+{% endblock %}
