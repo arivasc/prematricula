@@ -12,9 +12,15 @@
             <a href="aa">form</a>
             <a href="aaa">form_by_field</a>
             <a href="aaaa">form_horizontal</a>
+            {% if user.is_authenticated %}
+            <a href="usuario/logout">Cerrar sesión</a> Hola {{user.email}}
+            {% else %}
+            <a href="usuario/login">Inicia sesión</a>
+            {% endif %}
         </p>
 
-        {% autoescape off %}{% bootstrap_messages %}{% endautoescape %}
+        
+
 
         {% block content %}(no content){% endblock %}
     </div>
