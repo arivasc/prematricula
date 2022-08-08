@@ -7,12 +7,15 @@
         <h1>{% block title %}(no title){% endblock %}</h1>
 
         <p>
-            <a href="{% url 'home' %}">home</a>
+            <a href="{% url 'home' %}">Inicio</a>
             <a href="a">formset</a>
             <a href="aa">form</a>
             <a href="aaa">form_by_field</a>
             <a href="aaaa">form_horizontal</a>
             {% if user.is_authenticated %}
+                {% if user.is_staff %}
+                <a href="abc">Soy staff</a>
+                {% endif %}
             <a href="usuario/logout">Cerrar sesión</a> Hola {{user.email}}
             {% else %}
             <a href="usuario/login">Inicia sesión</a>
