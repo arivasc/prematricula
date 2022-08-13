@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from csv import reader
 from Auth.models import User
-from Schools.models import Curso, Escuela
+from Schools.models import Curso, Escuela, Malla
 
 from django.contrib.auth.views import LoginView    
 
@@ -30,14 +30,17 @@ def register_from_csv(request):
 
 def register_cursos_csv(request):
     with open('templates/csv/MALLA-EPIS-2017.csv', encoding="utf8") as csv_file:
-        csvf = reader(csv_file)
+        ccsvf = reader(csv_file)
         #_ = next(csvf)
-        for row in csvf:
+        for row in ccsvf:
             curso = Curso()
             curso.codigo = row[0]
             curso.nombre = row[1]
             curso.prereq = row[2]
             curso.creditos = row[3]
             curso.semestre = row[4]
+            malla = Malla.objects.get(anio=2017)
+            curso.malla = malla
+            curso.save()
     
     return JsonResponse('Creación de cursos desde csv trabajando...', safe= False)
