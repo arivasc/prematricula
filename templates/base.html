@@ -8,17 +8,19 @@
 
         <p>
             <a href="{% url 'home' %}">Inicio</a>
-            <a href="a">formset</a>
-            <a href="aa">form</a>
-            <a href="aaa">form_by_field</a>
-            <a href="aaaa">form_horizontal</a>
+
             {% if user.is_authenticated %}
                 {% if user.is_staff %}
                 <a href="abc">Soy staff</a>
+                <a href="escuelas/mallas">Mallas</a>
+                <a href="escuelas">Escuelas</a>
+                <a href="escuelas/Cursos">Cursos</a>
+                {% else %}
+                <a href="cba">No soy Staff</a>
                 {% endif %}
             <a href="usuario/logout">Cerrar sesión</a> Hola {{user.email}}
             {% else %}
-            <a href="usuario/login">Inicia sesión</a>
+            <a href="usuario/login">Iniciar sesión</a>
             {% endif %}
         </p>
 
