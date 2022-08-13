@@ -39,6 +39,7 @@ class Curso(models.Model):
     prereq = models.CharField(max_length=64, null=True)
     desc = models.TextField(null=True)
     creditos = models.PositiveSmallIntegerField()
+    semestre = models.PositiveSmallIntegerField()
     malla = models.ForeignKey(
         Malla,
         on_delete=models.SET_NULL,

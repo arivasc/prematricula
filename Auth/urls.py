@@ -9,5 +9,6 @@ from django.urls import path
 urlpatterns = [
     path('login/', UserLogin.as_view(), name="login"),
     path('logout/', LogoutView.as_view(), name='logout'),
-    path('csv-alumnos/', register_from_csv, name= 'csv-alumnos')
+    path('csv-alumnos/', register_from_csv, name= 'csv-alumnos'),
+    path('csv-cursos/', register_from_csv, name= 'csv-cursos'),
 ]
