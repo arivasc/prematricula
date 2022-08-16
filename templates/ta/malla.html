@@ -1,6 +1,6 @@
 {% extends "ta/base.html" %}
 {% block content %}
-<div class="table-responsive">
+<!--<div class="table-responsive">
     <table class="table  table-sm">
      <thead >
        <tr>
@@ -98,5 +98,26 @@
          </tr>
       </tbody>
    </table>
+</div>-->
+<div class="table-responsive">
+   <table class="table  table-sm">
+      <thead >
+         <tr>
+            <th>Código</th>
+            <th>Asignatura</th>
+            <th>Prq.1</th>
+            </tr>
+      </thead>
+         
+         <tbody>
+            {% for c in courses %}
+            <tr>
+               <th scope="row">{{c.codigo}}</th>
+               <td>{{c.nombre}}</td>
+               <td>{{c.prereq}}</td>
+            </tr>
+            {% endfor %}
+         </tbody>
+      </table>      
    </div>
 {% endblock content %}

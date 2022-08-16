@@ -8,7 +8,7 @@ from Schools.models import Curso, Escuela, Malla
 from django.contrib.auth.views import LoginView    
 
 class UserLogin(LoginView):
-    template_name = 'LoginView_form.html'
+    template_name = 'ta/login.html'
 
 def register_from_csv(request):
     with open('templates/csv/test-ips.csv', encoding="utf8") as csv_file:

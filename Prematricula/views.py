@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.contrib import messages
 from django.views.generic.base import TemplateView
 from django.http import HttpResponse
+from Schools.models import Curso
 
 # Create your views here.
 def home(request):
@@ -10,11 +11,16 @@ def home(request):
 def about(request):
     return render(request, 'ta/about.html', {'title':'Acerca de la Escuela'})
 
-def malla(request):
-    return render(request, 'ta/malla.html', {'title':'Malla Curricular 2017'})
+#def malla(request):
+#    return render(request, 'ta/malla.html', {'title':'Malla Curricular 2017'})
 
 def login(request):
     return render(request, 'ta/login.html', {'title':'Inicio de Sesión'})
 
 def aboutus(request):
     return render(request, 'ta/aboutus.html', {'title':'Acerca de Nosotros'})
+
+def malla(request):
+    obj = Curso.objects.all()
+    context = { 'courses' : obj, 'title' : 'Malla Curricular 2017'}
+    return render(request,'ta/malla.html', context)
