@@ -15,12 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
-from Prematricula.views import HomePageView
+from Prematricula import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", HomePageView.as_view(), name="home"),
+    path('', views.home, name='project-home'),
+    path('about/', views.about, name='project-about'),
+    path('malla/', views.malla, name='project-malla'),
+    path('about-us/', views.aboutus, name='project-aboutus'),
+    path('login/', views.login, name='project-login'),
     path('escuelas/', include('Schools.urlsEscuelas')),
     path('escuelas/mallas/', include('Schools.urlsMallas')),
     path('escuelas/cursos/', include('Schools.urlsCursos')),

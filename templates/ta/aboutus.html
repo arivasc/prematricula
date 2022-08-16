@@ -1,41 +1,78 @@
 {% extends "ta/base.html" %}
+{% load static %}
 {% block content %}
 <section class="our-webcoderskull padding-lg">
-    <div class="container">
-      <div class="row heading heading-icon">
-          <h2>Nosotros</h2>
-      </div>
-      <ul class="row">
-        <li class="col-12 col-md-6 col-lg-3">
-            <div class="cnt-block equal-hight">
-              <figure><img src="" class="img-responsive" alt=""></figure>
-              <h3>Marco Centeno</h3>
-              <small><address>mcentenoqu@unsa.edu.pe</address></small>
-            </div>
-        </li>
-        <li class="col-12 col-md-6 col-lg-3">
-            <div class="cnt-block" >
-              <figure><img src="" class="img-responsive" alt=""></figure>
-              <h3>Antohny Rivas</h3>
-              <small><address>arivasc@unsa.edu.pe</address></small>              
-            </div>
-        </li>
-
-        <li class="col-12 col-md-6 col-lg-3">
-            <div class="cnt-block">
-              <figure><img src="" class="img-responsive" alt=""></figure>
-              <h3>Milagros Paricanaza</h3>
-              <small><address>mparicanazac@unsa.edu.pe</address></small>
-            </div>
-         </li>
-        <li class="col-12 col-md-6 col-lg-3">
-            <div class="cnt-block">
-              <figure><img src="" class="img-responsive" alt=""></figure>
-              <h3>Ronald Huamani</h3>
-              <small><address>rhuamanipaco@unsa.edu.pe</address></small>
-            </div>
-        </li>
-      </ul>
+    <div class="row heading heading-icon">
+      <h2>Nosotros</h2>
     </div>
-  </section> 
+</section>
+<div class="container">
+  <div class="row">
+    <!-- US -->
+    <div class="col-lg-4 teacher">
+      <div class="card">
+        <div class="card_img">
+          <img
+            class="card-img-top trans_200"
+            src="{% static 'images/us.jpg' %}"
+          />
+        </div>
+        <div class="card-body text-center">
+          <div class="card-title"><h5>Marco Centeno</h5></div>
+          <div class="card-title"><a href="mailto:mcentenoqu@unsa.edu.pe" style="font-size: 0.875em;">mcentenoqu@unsa.edu.pe</a></div>
+          <div class="card-text">Rol: Front End Developer</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 teacher">
+      <div class="card">
+        <div class="card_img">
+          <img
+            class="card-img-top trans_200"
+            src="{% static 'images/us.jpg' %}"
+          />
+        </div>
+        <div class="card-body text-center">
+          <div class="card-title"><h5>Anthony Rivas</h5></div>
+          <div class="card-title"><a href="mailto:arivasc@unsa.edu.pe" style="font-size: 0.875em;">arivasc@unsa.edu.pe</a></div>
+          <div class="card-text">Rol: Back End Developer</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 teacher">
+      <div class="card">
+        <div class="card_img">
+          <img
+            class="card-img-top trans_200"
+            src="{% static 'images/us.jpg' %}"
+          />
+        </div>
+        <div class="card-body text-center">
+          <div class="card-title"><h5>Milagros Paricanaza</h5></div>
+          <div class="card-title"><a href="mailto:mparicanazac@unsa.edu.pe" style="font-size: 0.875em;">mparicanazac@unsa.edu.pe</a></div>
+          <div class="card-text">Rol: Database Designer</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4 teacher">
+      <div class="card">
+        <div class="card_img">
+          <img
+            class="card-img-top trans_200"
+            src="{% static 'images/us.jpg' %}"
+          />
+        </div>
+        <div class="card-body text-center">
+          <div class="card-title"><h5>Ronald Huamani</h5></div>
+          <div class="card-title"><a href="mailto:rhuamanipaco@unsa.edu.pe" style="font-size: 0.875em;">rhuamanipaco@unsa.edu.pe</a></div>
+          <div class="card-text">Rol: Back End Developer</div>
+        </div>
+      </div>
+    </div>
+        
+  </div>
+</div>
 {% endblock content %}
